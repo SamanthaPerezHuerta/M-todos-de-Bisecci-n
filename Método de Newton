@@ -1,4 +1,4 @@
-#METODO DE NEWTON  
+#METODO DE NEWTON
 from math import *
 import numpy as np
 import matplotlib . pyplot as plt
@@ -14,19 +14,17 @@ a = 1
 b = 2
 
 #Se guardan valores iniciales del error y del número de iteraciones
-tol = 0.000000001  #float(input("Ingrese el valor de la tolerancia: "))
-nmax = 20 #float(input("Ingrese el número máximo de iteraciones: "))
+tol = 0.000000001  #float(input("Introduzca el valor de la tolerancia: "))
+nmax = 20 #float(input("Introduzca el número máximo de iteraciones: "))
 error = 100
 niter = 0
-# Método de  Newton
-
-#Evaluacion de la función en los puntos a, b y m
+#Se evalua de la función en los puntos a, b y m
 
 i=1
-print("# iter  \t\t P  \t\t error")
+print("no. it  \t\t P  \t\t error")
 print("{0} \t\t {1:6.4f}  \t {2:6.4f}".format(i, pi, error ))
 
-# ciclo iterativo
+# ciclo iterativo que determinará la raíz al parar
 while error > tol and i <= nmax:
     fa=funcion1(pi)  
     da=d1(pi)
@@ -37,4 +35,4 @@ while error > tol and i <= nmax:
     i += 1
     print("{0} \t\t {1:6.6f} \t {2:6.6f}".format(i, p,error ))
 
-print("La raíz de la función dada en el intervalo [{0:6.4f},{1:6.4f}] es {2:6.7f}".format(a,b,p))
+print("La raíz obtenida de la función dada en el intervalo [{0:6.4f},{1:6.4f}] se halla en {2:6.7f}".format(a,b,p))

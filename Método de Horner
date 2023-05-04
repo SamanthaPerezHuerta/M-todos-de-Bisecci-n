@@ -7,19 +7,19 @@ tol=0.000001
 i=0
 nmax=20
 error=100
-#coeficientes de x^4 + 2x^3 + x^2-x-6
+#Valores respecto a los coeficientes del polinomio x^4 + 2x^3 + x^2-x-6
 a=-6
 b=-1
 c=1
 d=2
 e=1
-#Se define la funcion p(x)
+#Se define la funcion p(x) para su lectura
 p = np.array([a,b,c, d,  e ])
 pi=1.5
 
-#Ciclo iterativo 
+#Ciclo iterativo que repetirá hasta llegar a la aproximación de la raíz
 while error > tol and i <= nmax:
-   #Se aplica el método de horner 
+   #Se aplica el método de horner sobre los datos
   q4=e
   q3=d+ q4*(pi)
   q2=c + q3*(pi)
